@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body onload="reset()">
+<div class="wrapper flex">
+  <main class="main">
+    <div class="card flex">
+      
+      <div class="input">  
+        
+        <div class="title">
+          <h1 class="title__head">Bill</h1>
+          <p class="title__warning" id="warning-bill">Invalid input</p>
+        </div>
+        
+        <div class="bill flex">
+          <img class="bill__currency" src="./assets/images/icon-dollar.svg" alt="">
+          <input class="bill__amount" id="bill" type="text" placeholder="0"></input>
+        </div>
+        
+        <div class="tip-selector">
+          <p class="tip-title">Select Tip %</p>
+          <p class="tip-warning" id="tip-warning">Invalid input</p>
+        </div>
+        
+        <div class="tip flex">
+          <button class="tip__amount" id="tip-btn1">5%</button>
+          <button class="tip__amount" id="tip-btn2">10%</button>
+          <button class="tip__amount" id="tip-btn3">15%</button>
+          <button class="tip__amount" id="tip-btn4">25%</button>
+          <button class="tip__amount" id="tip-btn5">50%</button>
+          <input class="tip__amount" id="tip-input" type="text" placeholder="Custom"></input>
+        </div>
+
+        <div class="people flex">
+          <p class="pepole__text">Number of People</p>
+          <p class="people__warning-one" id="warning-one">Can't be zero</p>
+          <p class="people__warning-two" id="warning-two">Invalid input</p>
+        </div>
+
+        <div class="per-person flex">
+          <img src="./assets/images/icon-person.svg" alt="">
+          <input class="per-person__amount" id="n-people"type="text" placeholder="0"></input>
+        </div>
+      </div>
+
+      <div class="display">
+
+        <div class="tip-person flex">
+          <div class="tip-person__description">
+            <p class="line-one">Tip Amount</p>
+            <p class="line-two">/ person</p>
+          </div>
+          <p class="tip-person__amount" id="tip-per-person">$0.00</p>
+        </div>
+
+        <div class="total-person flex">
+          <div class="total-person__description">
+            <p class="line-one">Total</p>
+            <p class="line-two">/ person</p>
+          </div>
+          <p class="total-person__amount" id="total-per-person">$0.00</p>
+        </div>
+
+        <button class="reset" onclick="reset()">Reset</button>
+      </div>
+    
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
